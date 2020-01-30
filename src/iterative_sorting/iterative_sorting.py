@@ -11,16 +11,19 @@ def selection_sort( arr ):
                 smallest_index = j
 
         # TO-DO: swap
-        arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
-        
+        arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]        
     return arr
 
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
-
+    for i in range(len(arr)):
+        for j in range(0, len(arr)-i-1):
+            if arr[j] > arr[j+1]:
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
     return arr
-
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
